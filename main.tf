@@ -1,11 +1,13 @@
 resource "jenkins_folder" "folders" {
-  name = "infra"
+  count = length(var.folders)
+  name  = element(var.folders, count.index)
 }
 
 resource "jenkins_job" "job" {
-  name     = "roboshop"
-  folder   = jenkins_folder.folders.id
-  template = templatefile("${path.module}/sb-job.xml", {
-    description = ""
+  count     = length(var.jobs)
+  name      = loookup(element(var.jobs, count.index), "name", null)
+  folder    = loookup(element(var.jobs, count.index), "folder", null)
+  template  = templatefile("${path.module}/sb-job.xml", {
+    repo_url = loookup(element(var.jobs,count.index), "repo_url", null)
   })
 }
