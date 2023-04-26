@@ -22,7 +22,7 @@ lifecycle {
 
 data "aws_instance" "jenkins" {
   
-  id = "i-0ceae52abd7e93392"
+  instance_id = "i-0ceae52abd7e93392"
 }
 
 
