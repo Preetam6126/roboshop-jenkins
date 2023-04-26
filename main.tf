@@ -19,3 +19,17 @@ lifecycle {
   }
 
 }
+
+data "aws_instance" "jenkins" {
+  
+  id = "i-0ceae52abd7e93392"
+}
+
+
+resource "aws_route53_record" "jenkins" {
+  zone_id = "Z099042325KVJ8P6CC8JI"
+  name    = "jenkins.devops36.shop"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
+}
