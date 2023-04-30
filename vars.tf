@@ -3,10 +3,9 @@ variable "folders" {
   
  }
  
-variable "jobs" {
+variable "m-jobs" {
 default = [
 
-  { name = "roboshop", folder = "infra", repo_url = "https://github.com/Preetam6126/roboshop-infra" },
   { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/frontend" },
   { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/catalogue" },
   { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/user" },
@@ -15,4 +14,16 @@ default = [
   { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/payment" }
   
   ]
+}
+
+variable "s-jobs" {
+default = [
+{ name = "roboshop", folder = "infra", repo_url = "https://github.com/Preetam6126/roboshop-infra" },
+ ]
+}
+
+variable "force" {
+  
+  default = false
+  
 }
