@@ -1,20 +1,20 @@
 variable "folders" {
-  default = [ "infra", "CI-pipeline" ]
+  default = [ "infra", "CI-pipeline", "Preetam"]
   
  }
  
-# variable "m-jobs" {
-# default = [
+variable "m-jobs" {
+default = [
 
-#   { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/frontend" },
-#   { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/catalogue" },
-#   { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/user" },
-#   { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/cart" },
-#   { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/shipping" },
-#   { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/payment" }
+  { name = "SQL", folder = "Preetam", repo_url = "https://github.com/Preetam6126/robo-jenkins" }
+  # { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/catalogue" },
+  # { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/user" },
+  # { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/cart" },
+  # { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/shipping" },
+  # { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/Preetam6126/payment" }
   
-#   ]
-# }
+  ]
+}
 
 variable "s-jobs" {
 default = [
