@@ -19,7 +19,7 @@ resource "jenkins_job" "s-job" {
 #     ignore_changes = [template]
 #   }
 
-# }
+}
 
 resource "jenkins_job" "m-job" {
   depends_on = [jenkins_folder.folders]
@@ -37,7 +37,7 @@ resource "jenkins_job" "m-job" {
 #     ignore_changes = [template]
 #   }
 
-# }
+}
 
 
 data "aws_instance" "jenkins" {
