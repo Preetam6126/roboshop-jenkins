@@ -30,3 +30,7 @@ variable "force" {
   
 }
 
+{ name = "roboshop", folder = "Infra", repo_url = "https://github.com/raghudevopsb71/roboshop-infra", filename = "Jenkinsfile" },
+    { name = "App-Deployment", folder = "Infra", repo_url = "https://github.com/raghudevopsb71/roboshop-ansible", filename = "Jenkinsfile-deployment" },
+    { name = "Helm-Deployment", folder = "Infra", repo_url = "https://github.com/raghudevopsb71/roboshop-helm-chart", filename = "Jenkinsfile" }
+  ]
